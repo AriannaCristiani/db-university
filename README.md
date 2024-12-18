@@ -77,3 +77,12 @@ SELECT COUNT(*) AS teachers_without_phone_number
 FROM `teachers`
 WHERE `phone` IS NULL;
 ```
+
+
+
+### Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo degree_id, inserire un valore casuale)
+
+```SQL
+INSERT INTO `students` (`degree_id`,`name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email` )
+VALUES (FLOOR(1 + (RAND() * 80)) ,'Lola', 'Glicine', '1997-12-06', 'CRSTSN96H53N219C','2019-04-19','468397','glicine@gmail.it');
+```
