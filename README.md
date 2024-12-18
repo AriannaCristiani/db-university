@@ -1,9 +1,9 @@
-### Selezionare tutti gli studenti che si sono iscritti nel 1990 (0)
+### Selezionare tutti gli studenti che si sono iscritti nel 1990 (160)
 
 ```SQL
 SELECT *
 FROM `students`
-WHERE YEAR(`enrolment_date`) = 1990
+WHERE YEAR(`date_of_birth`) = 1990
 ```
 
 ### Selezionare tutti i corsi che valgono più di 10 crediti (479)
