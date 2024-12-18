@@ -86,3 +86,14 @@ WHERE `phone` IS NULL;
 INSERT INTO `students` (`degree_id`,`name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email` )
 VALUES (FLOOR(1 + (RAND() * 80)) ,'Lola', 'Glicine', '1997-12-06', 'CRSTSN96H53N219C','2019-04-19','468397','glicine@gmail.it');
 ```
+
+
+
+
+### Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
+
+```SQL
+UPDATE `teachers`
+SET `office_number` = 126
+WHERE `name` = 'Pietro' AND `surname` = 'Rizzo';
+```
