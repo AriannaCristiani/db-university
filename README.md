@@ -97,3 +97,16 @@ UPDATE `teachers`
 SET `office_number` = 126
 WHERE `name` = 'Pietro' AND `surname` = 'Rizzo';
 ```
+
+
+
+
+### Eliminare dalla tabella studenti il record creato precedentemente al punto 9
+
+```SQL
+DELETE FROM `students`
+WHERE `name` = 'Lola' 
+AND `surname` = 'Glicine' 
+AND `date_of_birth` = '1997-12-06'
+AND `fiscal_code` = 'CRSTSN96H53N219C';
+```
