@@ -44,3 +44,19 @@ JOIN `departments` dep
 ON d.`department_id` = dep.`id`
 ORDER BY s.`surname`, s.`name`;
 ```
+
+
+
+### Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
+
+```SQL
+SELECT deg.`name` AS corso_laurea, c.`name` AS nome_corso, t.`name` AS nome_insegnante, t.`surname` AS cognome_insegnante
+FROM `degrees` deg
+JOIN `course_teacher` ct 
+ON deg.`id` = ct.`course_id`
+JOIN `courses` c 
+ON ct.`course_id` = c.`id`
+JOIN `teachers` t 
+ON ct.`teacher_id` = t.`id`
+ORDER BY deg.`name`, c.`name`, t.`name`, t.`surname`;
+```
