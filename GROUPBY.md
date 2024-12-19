@@ -25,3 +25,15 @@ JOIN `exam_student` es
 ON e.`id` = es.`exam_id`
 GROUP BY e.`date`
 ```
+
+
+
+### Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+```SQL
+SELECT d.`name` AS nome_dipartimento, COUNT(deg.`id`) AS numero_corsi
+FROM `departments` d
+JOIN `degrees` deg 
+ON d.`id` = deg.`department_id`
+GROUP BY d.`id`
+```
