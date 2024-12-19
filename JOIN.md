@@ -60,3 +60,19 @@ JOIN `teachers` t
 ON ct.`teacher_id` = t.`id`
 ORDER BY deg.`name`, c.`name`, t.`name`, t.`surname`;
 ```
+
+
+
+### Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
+
+```SQL
+SELECT DISTINCT t.* 
+FROM `teachers` t
+JOIN `course_teacher` ct 
+ON t.`id` = ct.`teacher_id`
+JOIN `courses` c 
+ON ct.`course_id` = c.`id`
+JOIN `degrees` deg 
+ON c.`degree_id` = deg.`id`
+WHERE deg.`department_id` = (SELECT `id` FROM `departments` WHERE `name` = 'Dipartimento di Matematica');
+```
